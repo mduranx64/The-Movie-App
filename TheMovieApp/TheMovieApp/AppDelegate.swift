@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func configureWindow() {
-        window?.rootViewController = UIViewController()
+        let movieListViewController = MovieListViewController()
+        let navigationController = UINavigationController(rootViewController: movieListViewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

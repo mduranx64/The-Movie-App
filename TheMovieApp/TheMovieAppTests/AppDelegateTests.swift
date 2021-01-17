@@ -21,5 +21,19 @@ class AppDelegateTests: XCTestCase {
         XCTAssertTrue(window.isKeyWindow, "Expected window to be the key window")
         XCTAssertFalse(window.isHidden, "Expected window to be visible")
     }
+    
+    func test_configureWindow_configureRootViewController() {
+        let sut = AppDelegate()
+        sut.window = UIWindow()
+        
+        sut.configureWindow()
+        
+        let root = sut.window?.rootViewController
+        let navigationController = root as? UINavigationController
+        let topController = navigationController?.topViewController
+        
+        XCTAssertNotNil(navigationController, "Expected navigation controller as root, got \(String(describing: root)) instead")
+        XCTAssertTrue(topController is MovieListViewController, "Expected MovieListViewController as top view controller, got \(String(describing: topController)) instead")
+    }
 
 }
