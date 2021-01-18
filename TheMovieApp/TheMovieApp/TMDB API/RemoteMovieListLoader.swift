@@ -19,7 +19,7 @@ public final class RemoteMovieListLoader: MovieListLoader {
     }
     
     public func load(completion: @escaping (Result<[Movie], Error>) -> Void) {
-        
+        client.get(from: url) { _ in }
     }
 }
 
