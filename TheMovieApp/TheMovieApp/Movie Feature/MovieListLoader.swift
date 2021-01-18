@@ -9,7 +9,6 @@
 import Foundation
 
 public protocol MovieListLoader {
-    typealias Result = Swift.Result<[Movie], Error>
     
-    func load(completion: @escaping (Result) -> Void)
+    func load(completion: @escaping (Result<[Movie], Error>) -> Void)
 }

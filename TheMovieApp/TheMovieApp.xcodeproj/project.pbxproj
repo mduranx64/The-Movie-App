@@ -20,6 +20,8 @@
 		49E7C53025B5DBAD00BC95FB /* MovieListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7C52F25B5DBAD00BC95FB /* MovieListLoader.swift */; };
 		49E7C53325B5E41900BC95FB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7C53225B5E41900BC95FB /* Movie.swift */; };
 		49E7C53525B5E4DD00BC95FB /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7C53425B5E4DC00BC95FB /* Genre.swift */; };
+		49E7C53825B5EB6300BC95FB /* RemoteMovieListLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7C53725B5EB6300BC95FB /* RemoteMovieListLoaderTests.swift */; };
+		49E7C53A25B5EBFF00BC95FB /* RemoteMovieListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7C53925B5EBFF00BC95FB /* RemoteMovieListLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		49E7C52F25B5DBAD00BC95FB /* MovieListLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListLoader.swift; sourceTree = "<group>"; };
 		49E7C53225B5E41900BC95FB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		49E7C53425B5E4DC00BC95FB /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		49E7C53725B5EB6300BC95FB /* RemoteMovieListLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovieListLoaderTests.swift; sourceTree = "<group>"; };
+		49E7C53925B5EBFF00BC95FB /* RemoteMovieListLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovieListLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 			children = (
 				49E7C52425B5BDB300BC95FB /* Model */,
 				49E7C52B25B5C50700BC95FB /* HTTPClient.swift */,
+				49E7C53925B5EBFF00BC95FB /* RemoteMovieListLoader.swift */,
 			);
 			path = "TMDB API";
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		49E7C52D25B5D69600BC95FB /* TMDB API */ = {
 			isa = PBXGroup;
 			children = (
+				49E7C53725B5EB6300BC95FB /* RemoteMovieListLoaderTests.swift */,
 			);
 			path = "TMDB API";
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				49E7C52825B5BE1800BC95FB /* TMDBList.swift in Sources */,
 				49E7C52625B5BDCB00BC95FB /* TMDBMovie.swift in Sources */,
 				49E7C53025B5DBAD00BC95FB /* MovieListLoader.swift in Sources */,
+				49E7C53A25B5EBFF00BC95FB /* RemoteMovieListLoader.swift in Sources */,
 				49E7C53325B5E41900BC95FB /* Movie.swift in Sources */,
 				49E7C52A25B5BE3800BC95FB /* TMDBGenre.swift in Sources */,
 			);
@@ -331,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E7C53825B5EB6300BC95FB /* RemoteMovieListLoaderTests.swift in Sources */,
 				49CE7B1725B4858A00EBAE2A /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
