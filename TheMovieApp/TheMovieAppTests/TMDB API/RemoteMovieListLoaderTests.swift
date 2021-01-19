@@ -121,15 +121,3 @@ class HTTPClientSpy: HTTPClient {
         messages[index].completion(.success((data, response)))
     }
 }
-
-extension Date {
-    init(_ dateString: String) {
-        let dateStringFormatter = DateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-MM-dd"
-        dateStringFormatter.calendar = Calendar(identifier: .iso8601)
-        dateStringFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        let date = dateStringFormatter.date(from: dateString)!
-        self.init(timeInterval: 0, since:date)
-    }
-}
