@@ -25,7 +25,7 @@ struct TMDBMovie {
     var isFavorite = false
 }
 
-extension TMDBMovie: Decodable {
+extension TMDBMovie: Codable {
     enum CodingKeys: String, CodingKey {
         case voteCount = "vote_count"
         case id, video

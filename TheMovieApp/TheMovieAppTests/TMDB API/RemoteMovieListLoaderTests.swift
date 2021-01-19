@@ -55,6 +55,30 @@ class RemoteMovieListLoaderTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
+    func test_deliversMovieModelsOnResponseWithJSON() {
+        let (sut, client) = makeSUT()
+        let exp = expectation(description: "wait for load completion")
+
+        let expectedMovie = Movie(voteCount: 0, id: 0, video: false, voteAverage: 0.0, title: "IT", popularity: 0.0, posterPath: "/any", originalLanguage: "en", originalTitle: "IT", genreIDS: [0], backdropPath: "/any", adult: false, overview: "any", releaseDate: Date("2020-12-16"))
+        
+        let jsonData = JSONHelper.loadData(withFile: "MovieList", inBundle: Bundle(for: type(of: self)))!
+        
+        sut.load { result in
+            switch result {
+            case let .success(movies):
+                XCTAssertEqual(movies, [expectedMovie])
+            default:
+                XCTFail()
+            }
+            
+            exp.fulfill()
+        }
+        
+        client.complete(with: jsonData)
+        wait(for: [exp], timeout: 1.0)
+        
+    }
+    
     private func makeSUT(url: URL = URL(string: "https://any-url.com")!) -> (sut: RemoteMovieListLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteMovieListLoader(url: url, client: client)
@@ -83,5 +107,27 @@ class HTTPClientSpy: HTTPClient {
     
     func complete(with error: Error, at index: Int = 0) {
         messages[index].completion(.failure(error))
+    }
+    
+    func complete(with data: Data, at index: Int = 0) {
+        let response = HTTPURLResponse(
+            url: requestedURLs[index],
+            statusCode: 200,
+            httpVersion: nil,
+            headerFields: nil
+        )!
+        messages[index].completion(.success((data, response)))
+    }
+}
+
+extension Date {
+    init(_ dateString: String) {
+        let dateStringFormatter = DateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd"
+        dateStringFormatter.calendar = Calendar(identifier: .iso8601)
+        dateStringFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        let date = dateStringFormatter.date(from: dateString)!
+        self.init(timeInterval: 0, since:date)
     }
 }
