@@ -44,7 +44,7 @@ extension UICollectionView {
         layout.itemSize = CGSize(width: (frame.width / 2) - marginSpace, height: cellHeight)
         let collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
-        collectionView.registerCell(withClass: UICollectionViewCell.self)
+        collectionView.registerCell(withClass: MovieCell.self)
         return collectionView
     }
 }

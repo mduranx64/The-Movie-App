@@ -32,10 +32,22 @@ class MovieListDataSourceTests: XCTestCase {
 
     }
     
+    func test_collectionView_cellForItemAtIndexPath() {
+        let (sut, collection) = makeSUT()
+        let movie = makeMovie()
+        sut.update([movie])
+        
+        let cell = sut.collectionView(collection, cellForItemAt: IndexPath(row: 0, section: 0)) as? MovieCell
+        
+        XCTAssertEqual(cell?.titleLabel.text, movie.originalTitle)
+        
+    }
+    
     private func makeSUT() -> (sut: MovieListDataSource, collection: UICollectionView) {
         let dataSource = MovieListDataSource()
         let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewLayout())
         collectionView.dataSource = dataSource
+        collectionView.registerCell(withClass: MovieCell.self)
         return (dataSource, collectionView)
     }
     

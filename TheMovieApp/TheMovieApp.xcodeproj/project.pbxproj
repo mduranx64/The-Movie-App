@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492EAF1325B7650E000EFB1E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492EAF1225B7650E000EFB1E /* MovieCell.swift */; };
 		49CE7AE725B483DC00EBAE2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7AE625B483DC00EBAE2A /* AppDelegate.swift */; };
 		49CE7AEB25B483DC00EBAE2A /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */; };
 		49CE7AF025B483DD00EBAE2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE7AEF25B483DD00EBAE2A /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492EAF1225B7650E000EFB1E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		49CE7AE325B483DC00EBAE2A /* TheMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE7AE625B483DC00EBAE2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				49D1176625B744D100F8669E /* Helpers */,
 				49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */,
 				49D1175F25B7277A00F8669E /* MovieListDataSource.swift */,
+				492EAF1225B7650E000EFB1E /* MovieCell.swift */,
 			);
 			path = "Movie UI";
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492EAF1325B7650E000EFB1E /* MovieCell.swift in Sources */,
 				49E7C53525B5E4DD00BC95FB /* Genre.swift in Sources */,
 				49D1175225B6726500F8669E /* MovieMapper.swift in Sources */,
 				49CE7AEB25B483DC00EBAE2A /* MovieListViewController.swift in Sources */,
