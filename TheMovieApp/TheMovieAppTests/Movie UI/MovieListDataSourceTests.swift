@@ -23,6 +23,19 @@ class MovieListDataSourceTests: XCTestCase {
         XCTAssertEqual(movies.count, dataSource.collectionView(collectionView, numberOfItemsInSection: 0))
     }
     
+    func test_item_returnCorrentItemByIndex() {
+        let dataSource = MovieListDataSource()
+        let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewLayout())
+        collectionView.dataSource = dataSource
+        let movies = [makeMovie(id: 0), makeMovie(id: 1)]
+        
+        dataSource.update(movies)
+        let expectedItem = dataSource.item(at: 1)
+        
+        XCTAssertEqual(movies[1], expectedItem)
+
+    }
+    
     private func makeSUT() -> MovieListDataSource {
         let dataSource = MovieListDataSource()
         return dataSource
