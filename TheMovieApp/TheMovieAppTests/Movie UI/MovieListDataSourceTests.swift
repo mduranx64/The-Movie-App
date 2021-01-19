@@ -13,32 +13,30 @@ import XCTest
 class MovieListDataSourceTests: XCTestCase {
     
     func test_update_setMoviesMatchCount() {
-        let dataSource = MovieListDataSource()
-        let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewLayout())
-        collectionView.dataSource = dataSource
+        let (sut, collectionView) = makeSUT()
         let movies = [makeMovie(id: 0), makeMovie(id: 1)]
         
-        dataSource.update(movies)
+        sut.update(movies)
         
-        XCTAssertEqual(movies.count, dataSource.collectionView(collectionView, numberOfItemsInSection: 0))
+        XCTAssertEqual(movies.count, sut.collectionView(collectionView, numberOfItemsInSection: 0))
     }
     
     func test_item_returnCorrentItemByIndex() {
-        let dataSource = MovieListDataSource()
-        let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewLayout())
-        collectionView.dataSource = dataSource
+        let (sut, _) = makeSUT()
         let movies = [makeMovie(id: 0), makeMovie(id: 1)]
         
-        dataSource.update(movies)
-        let expectedItem = dataSource.item(at: 1)
+        sut.update(movies)
+        let expectedItem = sut.item(at: 1)
         
         XCTAssertEqual(movies[1], expectedItem)
 
     }
     
-    private func makeSUT() -> MovieListDataSource {
+    private func makeSUT() -> (sut: MovieListDataSource, collection: UICollectionView) {
         let dataSource = MovieListDataSource()
-        return dataSource
+        let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewLayout())
+        collectionView.dataSource = dataSource
+        return (dataSource, collectionView)
     }
     
     private func makeMovie(id: Int = 0) -> Movie {
