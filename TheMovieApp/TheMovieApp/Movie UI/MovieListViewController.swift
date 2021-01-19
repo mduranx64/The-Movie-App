@@ -8,13 +8,19 @@
 
 import UIKit
 
+public protocol MovieListViewControllerDelegate {
+    func didRequestMovieList()
+}
+
 public class MovieListViewController: UIViewController {
 
     private var collectionView: UICollectionView?
     private var dataSource: MovieListDataSource
+    private var delegate: MovieListViewControllerDelegate
     
-    public init(dataSource: MovieListDataSource) {
+    public init(dataSource: MovieListDataSource, delegate: MovieListViewControllerDelegate) {
         self.dataSource = dataSource
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,12 +34,20 @@ public class MovieListViewController: UIViewController {
         self.collectionView?.dataSource = dataSource
         self.collectionView?.delegate = self
         self.view = collectionView
+        delegate.didRequestMovieList()
     }
 }
 
 extension MovieListViewController: UICollectionViewDelegate {
 
     
+}
+
+extension MovieListViewController: MovieListView {
+    public func display(_ viewModel: MovieListViewModel) {
+        dataSource.update(viewModel.movies)
+        collectionView?.reloadData()
+    }
 }
 
 extension UICollectionView {
@@ -48,3 +62,4 @@ extension UICollectionView {
         return collectionView
     }
 }
+

@@ -11,6 +11,8 @@
 		49BC45D325B77AE9001CBE46 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */; };
 		49BC45D525B77BCC001CBE46 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */; };
 		49BC45D725B77BEC001CBE46 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */; };
+		49BC45DA25B7842D001CBE46 /* MovieListUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D925B7842D001CBE46 /* MovieListUIComposer.swift */; };
+		49BC45DC25B7845B001CBE46 /* MovieListLoaderPresentacionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45DB25B7845B001CBE46 /* MovieListLoaderPresentacionAdapter.swift */; };
 		49CE7AE725B483DC00EBAE2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7AE625B483DC00EBAE2A /* AppDelegate.swift */; };
 		49CE7AEB25B483DC00EBAE2A /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */; };
 		49CE7AF025B483DD00EBAE2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE7AEF25B483DD00EBAE2A /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		49BC45D925B7842D001CBE46 /* MovieListUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUIComposer.swift; sourceTree = "<group>"; };
+		49BC45DB25B7845B001CBE46 /* MovieListLoaderPresentacionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListLoaderPresentacionAdapter.swift; sourceTree = "<group>"; };
 		49CE7AE325B483DC00EBAE2A /* TheMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE7AE625B483DC00EBAE2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49BC45D825B7839C001CBE46 /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				49BC45D925B7842D001CBE46 /* MovieListUIComposer.swift */,
+				49BC45DB25B7845B001CBE46 /* MovieListLoaderPresentacionAdapter.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
 		49CE7ADA25B483DC00EBAE2A = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 				49E7C52325B5BD9500BC95FB /* TMDB API */,
 				49D1175A25B7215200F8669E /* Movie Presentation */,
 				49D1175B25B7216900F8669E /* Movie UI */,
+				49BC45D825B7839C001CBE46 /* Composition */,
 				49CE7AE625B483DC00EBAE2A /* AppDelegate.swift */,
 				49CE7AEF25B483DD00EBAE2A /* Assets.xcassets */,
 				49CE7AF125B483DD00EBAE2A /* LaunchScreen.storyboard */,
@@ -398,6 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BC45DC25B7845B001CBE46 /* MovieListLoaderPresentacionAdapter.swift in Sources */,
+				49BC45DA25B7842D001CBE46 /* MovieListUIComposer.swift in Sources */,
 				492EAF1325B7650E000EFB1E /* MovieCell.swift in Sources */,
 				49BC45D725B77BEC001CBE46 /* MovieListViewModel.swift in Sources */,
 				49E7C53525B5E4DD00BC95FB /* Genre.swift in Sources */,

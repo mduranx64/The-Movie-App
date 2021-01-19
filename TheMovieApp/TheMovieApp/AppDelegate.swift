@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func configureWindow() {
-        let movieListViewController = MovieListViewController(dataSource: MovieListDataSource())
+        let movieListViewController = MovieListViewController(dataSource: MovieListDataSource(), delegate: MovieListLoaderPresentacionAdapter())
         let navigationController = UINavigationController(rootViewController: movieListViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
