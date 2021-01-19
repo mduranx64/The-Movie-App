@@ -8,13 +8,41 @@
 
 import UIKit
 
-class MovieListViewController: UIViewController {
+public class MovieListViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    private var collectionView: UICollectionView?
+    private var dataSource: MovieListDataSource
+    
+    public init(dataSource: MovieListDataSource) {
+        self.dataSource = dataSource
+        super.init(nibName: nil, bundle: nil)
     }
-
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        self.collectionView = UICollectionView.makeMovieCollectionView(frame: self.view.frame)
+        self.collectionView?.dataSource = dataSource
+        self.collectionView?.delegate = self
+        self.view = collectionView
+    }
 }
 
+extension MovieListViewController: UICollectionViewDelegate {
+
+    
+}
+
+extension UICollectionView {
+    static func makeMovieCollectionView(frame: CGRect) -> UICollectionView {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let cellHeight: CGFloat = 234, marginSpace: CGFloat = 12
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.itemSize = CGSize(width: (frame.width / 2) - marginSpace, height: cellHeight)
+        let collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
+        return collectionView
+    }
+}
