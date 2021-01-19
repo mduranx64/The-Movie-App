@@ -26,6 +26,9 @@ public class MovieListDataSource: NSObject, UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        return cell
     }
 }

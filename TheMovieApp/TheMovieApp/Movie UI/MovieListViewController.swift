@@ -39,10 +39,12 @@ extension MovieListViewController: UICollectionViewDelegate {
 extension UICollectionView {
     static func makeMovieCollectionView(frame: CGRect) -> UICollectionView {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let cellHeight: CGFloat = 234, marginSpace: CGFloat = 12
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        let cellHeight: CGFloat = 234, marginSpace: CGFloat = 13
+        layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         layout.itemSize = CGSize(width: (frame.width / 2) - marginSpace, height: cellHeight)
         let collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        collectionView.registerCell(withClass: UICollectionViewCell.self)
         return collectionView
     }
 }
