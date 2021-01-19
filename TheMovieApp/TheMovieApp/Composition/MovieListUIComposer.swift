@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+public final class MovieListUIComposer {
+    private init (){}
+    
+    public static func movieListComposeWith(movieListLoader: MovieListLoader) -> MovieListViewController {
+        let presentationAdapter = MovieListLoaderPresentacionAdapter(movieListLoader: movieListLoader)
+        let movieListViewController = MovieListViewController(
+            dataSource: MovieListDataSource(),
+            delegate: presentationAdapter)
+        
+        presentationAdapter.presenter = MovieListPresenter(movieListView: movieListViewController)
+        
+        return movieListViewController
+    }
+}
