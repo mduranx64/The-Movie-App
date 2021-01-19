@@ -79,9 +79,11 @@ class RemoteMovieListLoaderTests: XCTestCase {
         
     }
     
-    private func makeSUT(url: URL = URL(string: "https://any-url.com")!) -> (sut: RemoteMovieListLoader, client: HTTPClientSpy) {
+    private func makeSUT(url: URL = URL(string: "https://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteMovieListLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteMovieListLoader(url: url, client: client)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
     }
 }

@@ -24,7 +24,8 @@ public final class RemoteMovieListLoader: MovieListLoader {
     }
     
     public func load(completion: @escaping (Result<[Movie], Error>) -> Void) {
-        client.get(from: url) { result in
+        client.get(from: url) { [weak self] result in
+            guard self != nil else { return }
             switch result {
             case let .success((data, response)):
                 completion(RemoteMovieListLoader.map(data, from: response))
