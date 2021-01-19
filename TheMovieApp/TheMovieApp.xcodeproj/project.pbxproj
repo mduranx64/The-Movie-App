@@ -121,8 +121,9 @@
 			children = (
 				49E7C52E25B5D74700BC95FB /* Movie Feature */,
 				49E7C52325B5BD9500BC95FB /* TMDB API */,
+				49D1175A25B7215200F8669E /* Movie Presentation */,
+				49D1175B25B7216900F8669E /* Movie UI */,
 				49CE7AE625B483DC00EBAE2A /* AppDelegate.swift */,
-				49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */,
 				49CE7AEF25B483DD00EBAE2A /* Assets.xcassets */,
 				49CE7AF125B483DD00EBAE2A /* LaunchScreen.storyboard */,
 				49CE7AF425B483DD00EBAE2A /* Info.plist */,
@@ -147,6 +148,21 @@
 				49CE7B0A25B483DD00EBAE2A /* Info.plist */,
 			);
 			path = TheMovieAppUITests;
+			sourceTree = "<group>";
+		};
+		49D1175A25B7215200F8669E /* Movie Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Movie Presentation";
+			sourceTree = "<group>";
+		};
+		49D1175B25B7216900F8669E /* Movie UI */ = {
+			isa = PBXGroup;
+			children = (
+				49CE7AEA25B483DC00EBAE2A /* MovieListViewController.swift */,
+			);
+			path = "Movie UI";
 			sourceTree = "<group>";
 		};
 		49E7C52325B5BD9500BC95FB /* TMDB API */ = {
