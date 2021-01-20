@@ -21,6 +21,8 @@ public class MovieListViewController: UIViewController {
     
     private var imageChache = [String: UIImage]()
     
+    public var detailsViewNavigation: ((Movie, UIImage?) -> ())?
+    
     public init(dataSource: MovieListDataSource, delegate: MovieListViewControllerDelegate) {
         self.dataSource = dataSource
         self.delegate = delegate
@@ -64,6 +66,11 @@ extension MovieListViewController: UICollectionViewDelegate {
         }
     }
     
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie = dataSource.item(at: indexPath.row)
+        let image = movie.posterPath.flatMap { imageChache[$0] }
+        self.detailsViewNavigation?(movie, image)
+    }
 }
 
 extension MovieListViewController: MovieListView {
