@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Movie: Equatable {
+public struct Movie: Equatable, Hashable {
     
     public let voteCount, id: Int
     public let video: Bool

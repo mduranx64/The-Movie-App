@@ -27,6 +27,7 @@
 		49CE7AF325B483DD00EBAE2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE7AF125B483DD00EBAE2A /* LaunchScreen.storyboard */; };
 		49CE7B1725B4858A00EBAE2A /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7B1625B4858A00EBAE2A /* AppDelegateTests.swift */; };
 		49CE7B1925B487D600EBAE2A /* TheMovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7B1825B487D600EBAE2A /* TheMovieAppUITests.swift */; };
+		49D0543725B8B89500ED3CA5 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0543625B8B89500ED3CA5 /* SharedTestHelpers.swift */; };
 		49D1175225B6726500F8669E /* MovieMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1175125B6726500F8669E /* MovieMapper.swift */; };
 		49D1175725B705E500F8669E /* MovieList.json in Resources */ = {isa = PBXBuildFile; fileRef = 49D1175525B7039100F8669E /* MovieList.json */; };
 		49D1175825B7132C00F8669E /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1175325B702A400F8669E /* JSONHelper.swift */; };
@@ -90,6 +91,7 @@
 		49CE7B0A25B483DD00EBAE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CE7B1625B4858A00EBAE2A /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		49CE7B1825B487D600EBAE2A /* TheMovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieAppUITests.swift; sourceTree = "<group>"; };
+		49D0543625B8B89500ED3CA5 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		49D1175125B6726500F8669E /* MovieMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapper.swift; sourceTree = "<group>"; };
 		49D1175325B702A400F8669E /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		49D1175525B7039100F8669E /* MovieList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieList.json; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				49D1175325B702A400F8669E /* JSONHelper.swift */,
 				49D1175D25B723E900F8669E /* XCTestCase+MemoryLeakTracking.swift */,
 				49D1176425B72E9B00F8669E /* Date+InitWithFormat.swift */,
+				49D0543625B8B89500ED3CA5 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				49D1175E25B723E900F8669E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				49D1176525B72E9B00F8669E /* Date+InitWithFormat.swift in Sources */,
 				49E7C53825B5EB6300BC95FB /* RemoteMovieListLoaderTests.swift in Sources */,
+				49D0543725B8B89500ED3CA5 /* SharedTestHelpers.swift in Sources */,
 				4977187E25B89C1B00C7A806 /* MovieListPresenterTests.swift in Sources */,
 				49D1176325B72C9A00F8669E /* MovieListDataSourceTests.swift in Sources */,
 				49CE7B1725B4858A00EBAE2A /* AppDelegateTests.swift in Sources */,
