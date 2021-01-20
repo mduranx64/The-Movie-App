@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		492EAF1325B7650E000EFB1E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492EAF1225B7650E000EFB1E /* MovieCell.swift */; };
+		4977184F25B838CA00C7A806 /* RemoteImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977184E25B838CA00C7A806 /* RemoteImageDataLoader.swift */; };
 		49BC45D325B77AE9001CBE46 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */; };
 		49BC45D525B77BCC001CBE46 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */; };
 		49BC45D725B77BEC001CBE46 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		492EAF1225B7650E000EFB1E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		4977184E25B838CA00C7A806 /* RemoteImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoader.swift; sourceTree = "<group>"; };
 		49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				49E7C53925B5EBFF00BC95FB /* RemoteMovieListLoader.swift */,
 				49D1175125B6726500F8669E /* MovieMapper.swift */,
 				49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */,
+				4977184E25B838CA00C7A806 /* RemoteImageDataLoader.swift */,
 			);
 			path = "TMDB API";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			files = (
 				49BC45E025B795B8001CBE46 /* ImageDateLoader.swift in Sources */,
 				49BC45DC25B7845B001CBE46 /* MovieListLoaderPresentacionAdapter.swift in Sources */,
+				4977184F25B838CA00C7A806 /* RemoteImageDataLoader.swift in Sources */,
 				49BC45DA25B7842D001CBE46 /* MovieListUIComposer.swift in Sources */,
 				492EAF1325B7650E000EFB1E /* MovieCell.swift in Sources */,
 				49BC45D725B77BEC001CBE46 /* MovieListViewModel.swift in Sources */,
