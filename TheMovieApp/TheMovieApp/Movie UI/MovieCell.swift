@@ -23,6 +23,7 @@ public class MovieCell: UICollectionViewCell {
     public let imageView: UIImageView = {
         let view = UIImageView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = UIView.ContentMode.scaleAspectFit
         return view
     }()
     
@@ -38,6 +39,12 @@ public class MovieCell: UICollectionViewCell {
         super.layoutSubviews()
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+        titleLabel.text = nil
     }
 }
 

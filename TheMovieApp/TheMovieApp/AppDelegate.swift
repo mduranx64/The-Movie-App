@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=9573a954d878b8c686236be7b7c653bd&page=1")!
         
         let remoteMovieListLoader = RemoteMovieListLoader(url: url, client: httpClient)
-        
-        let movieListViewController = MovieListUIComposer.movieListComposeWith(movieListLoader: remoteMovieListLoader)
+        let remoteImageDataLoader = RemoteImageDataLoader(client: httpClient)
+        let movieListViewController = MovieListUIComposer.movieListComposeWith(movieListLoader: remoteMovieListLoader, remoteImageDataLoader: remoteImageDataLoader)
         let navigationController = UINavigationController(rootViewController: movieListViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
