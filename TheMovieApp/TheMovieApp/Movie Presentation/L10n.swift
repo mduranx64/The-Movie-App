@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct L10n {
-    static let movieListTitle = NSLocalizedString("MOVIE_LIST_TITLE", comment: "")
+public struct L10n {
+    public static let movieListTitle = NSLocalizedString("MOVIE_LIST_TITLE", comment: "")
     
 }
