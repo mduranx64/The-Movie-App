@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class MovieListLoaderPresentacionAdapter: MovieListViewControllerDelegate {
+final class MovieListLoaderPresentationAdapter: MovieListViewControllerDelegate {
   
     private let movieListLoader: MovieListLoader
     private let imageDataLoader: ImageDataLoader

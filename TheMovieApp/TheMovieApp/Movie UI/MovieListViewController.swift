@@ -19,7 +19,7 @@ public class MovieListViewController: UIViewController {
     private var dataSource: MovieListDataSource
     private var delegate: MovieListViewControllerDelegate
     
-    private var imageChache = [String: UIImage]()
+    private var imageCache = [String: UIImage]()
     
     public var detailsViewNavigation: ((Movie, UIImage?) -> ())?
     
@@ -52,12 +52,12 @@ extension MovieListViewController: UICollectionViewDelegate {
         let movie = dataSource.item(at: indexPath.row)
         guard let posterPath = movie.posterPath else { return }
 
-        if let posterImage = imageChache[posterPath] {
+        if let posterImage = imageCache[posterPath] {
             (cell as? MovieCell)?.imageView.image = posterImage
         } else {
             delegate.didRequestMovieImage(imagePath: posterPath) { [weak self] image in
                 if let image = image,let updateCell = collectionView.cellForItem(at: indexPath) as? MovieCell {
-                    self?.imageChache[posterPath] = image
+                    self?.imageCache[posterPath] = image
                     collectionView.performBatchUpdates({
                         updateCell.imageView.image = image
                     })
@@ -68,7 +68,7 @@ extension MovieListViewController: UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movie = dataSource.item(at: indexPath.row)
-        let image = movie.posterPath.flatMap { imageChache[$0] }
+        let image = movie.posterPath.flatMap { imageCache[$0] }
         self.detailsViewNavigation?(movie, image)
     }
 }
