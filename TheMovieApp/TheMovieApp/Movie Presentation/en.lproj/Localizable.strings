@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TheMovieApp
+
+  Created by Miguel Duran on 20-01-21.
+  Copyright © 2021 mduranx64. All rights reserved.
+*/
+
+"MOVIE_LIST_TITLE" = "The Movie App";
