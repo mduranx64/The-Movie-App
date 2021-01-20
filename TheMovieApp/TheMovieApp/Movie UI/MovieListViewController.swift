@@ -10,6 +10,7 @@ import UIKit
 
 public protocol MovieListViewControllerDelegate {
     func didRequestMovieList()
+    func didRequestMovieImage(imagePath: String, completion: @escaping (UIImage?) -> Void)
 }
 
 public class MovieListViewController: UIViewController {
@@ -17,6 +18,8 @@ public class MovieListViewController: UIViewController {
     private var collectionView: UICollectionView?
     private var dataSource: MovieListDataSource
     private var delegate: MovieListViewControllerDelegate
+    
+    private var imageChache = [String: UIImage]()
     
     public init(dataSource: MovieListDataSource, delegate: MovieListViewControllerDelegate) {
         self.dataSource = dataSource
@@ -36,10 +39,30 @@ public class MovieListViewController: UIViewController {
         self.view = collectionView
         delegate.didRequestMovieList()
     }
+    
+    let imageRootURL = URL(string: "https://image.tmdb.org/t/p/w154")!
+    let imageDataLoader = RemoteImageDataLoader(client: URLSessionHTTPClient(session: URLSession(configuration: .ephemeral)))
 }
 
 extension MovieListViewController: UICollectionViewDelegate {
+    public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        let movie = dataSource.item(at: indexPath.row)
+        guard let posterPath = movie.posterPath else { return }
 
+        if let posterImage = imageChache[posterPath] {
+            (cell as? MovieCell)?.imageView.image = posterImage
+        } else {
+            delegate.didRequestMovieImage(imagePath: posterPath) { [weak self] image in
+                if let image = image,let updateCell = collectionView.cellForItem(at: indexPath) as? MovieCell {
+                    self?.imageChache[posterPath] = image
+                    collectionView.performBatchUpdates({
+                        updateCell.imageView.image = image
+                    })
+                }
+            }
+        }
+    }
     
 }
 
