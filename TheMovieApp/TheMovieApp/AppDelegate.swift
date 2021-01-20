@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func configureWindow() {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key={YOUR_API_KEY_HERE}&page=1")!
+        let url = URL(string: TMDBURLs.moviesURLString.rawValue)!
         
         let remoteMovieListLoader = RemoteMovieListLoader(url: url, client: httpClient)
         let remoteImageDataLoader = RemoteImageDataLoader(client: httpClient)
