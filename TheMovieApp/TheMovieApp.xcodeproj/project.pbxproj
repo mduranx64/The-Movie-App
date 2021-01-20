@@ -12,6 +12,8 @@
 		4977185525B866E500C7A806 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977185425B866E500C7A806 /* MovieDetailsViewController.swift */; };
 		4977187225B8778700C7A806 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977187125B8778700C7A806 /* MovieDetailsView.swift */; };
 		4977187425B87EE900C7A806 /* TMDBURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977187325B87EE900C7A806 /* TMDBURLs.swift */; };
+		4977187725B88F9C00C7A806 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4977187925B88F9C00C7A806 /* Localizable.strings */; };
+		4977187B25B8916700C7A806 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977187A25B8916700C7A806 /* L10n.swift */; };
 		49BC45D325B77AE9001CBE46 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */; };
 		49BC45D525B77BCC001CBE46 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */; };
 		49BC45D725B77BEC001CBE46 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */; };
@@ -66,6 +68,8 @@
 		4977185425B866E500C7A806 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		4977187125B8778700C7A806 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		4977187325B87EE900C7A806 /* TMDBURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBURLs.swift; sourceTree = "<group>"; };
+		4977187825B88F9C00C7A806 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4977187A25B8916700C7A806 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		49BC45D225B77AE9001CBE46 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 			children = (
 				49BC45D425B77BCC001CBE46 /* MovieListPresenter.swift */,
 				49BC45D625B77BEC001CBE46 /* MovieListViewModel.swift */,
+				4977187925B88F9C00C7A806 /* Localizable.strings */,
+				4977187A25B8916700C7A806 /* L10n.swift */,
 			);
 			path = "Movie Presentation";
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CE7AF325B483DD00EBAE2A /* LaunchScreen.storyboard in Resources */,
+				4977187725B88F9C00C7A806 /* Localizable.strings in Resources */,
 				49CE7AF025B483DD00EBAE2A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +458,7 @@
 				49E7C52A25B5BE3800BC95FB /* TMDBGenre.swift in Sources */,
 				4977187425B87EE900C7A806 /* TMDBURLs.swift in Sources */,
 				49D1176025B7277A00F8669E /* MovieListDataSource.swift in Sources */,
+				4977187B25B8916700C7A806 /* L10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +499,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4977187925B88F9C00C7A806 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4977187825B88F9C00C7A806 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		49CE7AF125B483DD00EBAE2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

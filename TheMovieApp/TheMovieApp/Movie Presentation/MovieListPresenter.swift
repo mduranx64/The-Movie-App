@@ -16,7 +16,7 @@ public final class MovieListPresenter {
     private let movieListView: MovieListView
     
     public static var title: String {
-        return "The Movie App"
+        return L10n.movieListTitle
     }
     
     public init(movieListView: MovieListView) {
