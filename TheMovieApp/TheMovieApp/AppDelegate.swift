@@ -32,6 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let remoteImageDataLoader = RemoteImageDataLoader(client: httpClient)
         let movieListViewController = MovieListUIComposer.movieListComposeWith(movieListLoader: remoteMovieListLoader, remoteImageDataLoader: remoteImageDataLoader)
         let navigationController = UINavigationController(rootViewController: movieListViewController)
+        
+        movieListViewController.detailsViewNavigation = { movie, image in
+            let movieDetailsViewController = MovieDetailsViewController(movie: movie, posterImage: image)
+            navigationController.pushViewController(movieDetailsViewController, animated: true)
+        }
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
