@@ -15,6 +15,10 @@ public protocol MovieListView {
 public final class MovieListPresenter {
     private let movieListView: MovieListView
     
+    public static var title: String {
+        return "The Movie App"
+    }
+    
     public init(movieListView: MovieListView) {
         self.movieListView = movieListView
     }

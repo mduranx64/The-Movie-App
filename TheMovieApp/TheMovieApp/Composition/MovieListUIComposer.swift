@@ -17,6 +17,8 @@ public final class MovieListUIComposer {
             dataSource: MovieListDataSource(),
             delegate: presentationAdapter)
         
+        movieListViewController.title = MovieListPresenter.title
+        
         presentationAdapter.presenter = MovieListPresenter(movieListView: movieListViewController)
         
         return movieListViewController
