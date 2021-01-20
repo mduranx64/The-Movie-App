@@ -28,5 +28,14 @@ public class MovieDetailsViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.view = movieDetailsView
+        movieDetailsView.viewModel = .init(movie: movie, image: posterImage)
+    }
+}
+
+extension MovieDetailsView.ViewModel {
+    init(movie: Movie, image: UIImage?) {
+        title = movie.title
+        overview = movie.overview
+        posterImage = image
     }
 }

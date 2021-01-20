@@ -15,7 +15,7 @@ class MovieDetailsView: UIView {
         didSet {
             titleLabel.text = viewModel.title
             overviewLabel.text = viewModel.overview
-            imageView.image = imageView.image
+            imageView.image = viewModel.posterImage
         }
     }
     
