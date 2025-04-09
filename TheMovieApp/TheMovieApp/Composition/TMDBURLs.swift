@@ -8,7 +8,15 @@
 
 import Foundation
 
-enum TMDBURLs: String {
-    case moviesURLString = "https://api.themoviedb.org/3/movie/popular?api_key={YOUR_API_KEY_HERE}&page=1"
-    case imagesURLString = "https://image.tmdb.org/t/p/w154"
+enum TMDBURLs {
+    static var moviesURLString: String {
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
+           let dict = NSDictionary(contentsOfFile: path),
+           let apiKey = dict["TMDB_API_KEY"] as? String {
+            return "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)&page=1"
+        }
+        return ""
+    }
+    
+    static let imagesURLString = "https://image.tmdb.org/t/p/w154"
 }

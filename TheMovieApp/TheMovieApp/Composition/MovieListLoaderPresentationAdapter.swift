@@ -35,7 +35,7 @@ final class MovieListLoaderPresentationAdapter: MovieListViewControllerDelegate 
     }
     
     func didRequestMovieImage(imagePath: String, completion: @escaping (UIImage?) -> Void) {
-        let imageRootURL = URL(string: TMDBURLs.imagesURLString.rawValue)!
+        let imageRootURL = URL(string: TMDBURLs.imagesURLString)!
         let urlWithPath = imageRootURL.appendingPathComponent(imagePath)
         _ = imageDataLoader.loadImageData(from: urlWithPath) { [weak self] result in
             guard self != nil else { return }

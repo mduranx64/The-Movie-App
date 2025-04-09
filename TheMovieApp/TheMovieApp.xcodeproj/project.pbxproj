@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		492EAF1325B7650E000EFB1E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492EAF1225B7650E000EFB1E /* MovieCell.swift */; };
+		49699A722DA60B2B0042832B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49699A712DA60B2B0042832B /* Secrets.plist */; };
 		4977184F25B838CA00C7A806 /* RemoteImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977184E25B838CA00C7A806 /* RemoteImageDataLoader.swift */; };
 		4977185525B866E500C7A806 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977185425B866E500C7A806 /* MovieDetailsViewController.swift */; };
 		4977187225B8778700C7A806 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977187125B8778700C7A806 /* MovieDetailsView.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		492EAF1225B7650E000EFB1E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		49699A712DA60B2B0042832B /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		4977184E25B838CA00C7A806 /* RemoteImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoader.swift; sourceTree = "<group>"; };
 		4977185425B866E500C7A806 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		4977187125B8778700C7A806 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				49CE7AEF25B483DD00EBAE2A /* Assets.xcassets */,
 				49CE7AF125B483DD00EBAE2A /* LaunchScreen.storyboard */,
 				49CE7AF425B483DD00EBAE2A /* Info.plist */,
+				49699A712DA60B2B0042832B /* Secrets.plist */,
 			);
 			path = TheMovieApp;
 			sourceTree = "<group>";
@@ -378,7 +381,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = mduranx64;
 				TargetAttributes = {
 					49CE7AE225B483DC00EBAE2A = {
@@ -421,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49699A722DA60B2B0042832B /* Secrets.plist in Resources */,
 				49CE7AF325B483DD00EBAE2A /* LaunchScreen.storyboard in Resources */,
 				4977187725B88F9C00C7A806 /* Localizable.strings in Resources */,
 				49CE7AF025B483DD00EBAE2A /* Assets.xcassets in Resources */,
@@ -696,7 +700,6 @@
 		49CE7B1125B483DD00EBAE2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,7 +723,6 @@
 		49CE7B1225B483DD00EBAE2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +745,6 @@
 		49CE7B1425B483DD00EBAE2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FQBYA7PMR;
@@ -765,7 +766,6 @@
 		49CE7B1525B483DD00EBAE2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FQBYA7PMR;

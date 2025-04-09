@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func configureWindow() {
-        let url = URL(string: TMDBURLs.moviesURLString.rawValue)!
+        let url = URL(string: TMDBURLs.moviesURLString)!
         
         let remoteMovieListLoader = RemoteMovieListLoader(url: url, client: httpClient)
         let remoteImageDataLoader = RemoteImageDataLoader(client: httpClient)
